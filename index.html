@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <!-- 
+        Author: Richard Smith
+        Date: 3/14/2019
+        Project: V4 of portifolio worthy site
+        File: index.html
+        -->
+
+    <!--this title is temporary-->
+    <title>We Build PCs</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="A helpful site for people looking to build PCs." />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="partlists.html">Build Guides</a></li>
+            <li><a href="#">Price Check</a></li>
+            <li><a target="example" href="#">Recommended Builds for Beginners</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <h1 class="mainHeader">We Build Computers</h1>
+
+    <img src="placeholderbanner.png" width="720" height="300" alt="StockPhoto" usemap="#bannernav" />
+    <button class="mainHeader" id="buildg">Build Guides</button>
+    <div class="panel">
+        <p>Here is a video on building a pc that I reccomend from the youtuber known as Bitwit.</p>
+        
+        <!--M8LO8 use of video in webpage/M8LO9 demonstration of iframe element-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IhX0fOUYd8Q?start=63" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <button class="mainHeader" id="priceC">Price Check</button>
+    <div class="panel">
+        <p>Here is an example of a build guide for a mid range pc.</p>
+    </div>
+    <button class="mainHeader" id="reCobb">Recommended Builds</button>
+    <div class="panel">
+        <p>Here is an example of a build guide for a mid range pc.</p>
+    </div>
+
+    <!--M5LO4 I used these button as a kind of pulldown for content. All the content is still placeholder.-->
+    <button class="mainHeader" id="blog">Blog</button>
+    <div class="panel">
+        <p>Here is an example of a build guide for a mid range pc.</p>
+    </div>
+
+    <map name="bannernav">
+        <area shape="circle" coords="100,60,30" href="#" alt="Parts">
+        <area shape="circle" coords="608,66,50" href="#" alt="Build guide">
+        <area shape="circle" coords="633,177,50" href="#" alt="Price Check">
+        <area shape="circle" coords="151,198,60" href="#" alt="insert graphic">
+    </map>
+
+    <!--I do have experience with java script and I made this using a tutorial on W3C.-->
+    <script>
+        var acc = document.getElementsByClassName("mainHeader");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+    <footer id="specialText">
+        <p>This is the bottom of the page.</p>
+    </footer>
+</body>
+    
+    
+
+</html>

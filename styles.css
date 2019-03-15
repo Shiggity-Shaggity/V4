@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/* 
+Name: Richard Smith
+Date: 3/14/19
+*/
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+li a{ 
+    float: left;
+    display: block;
+    color: black;
+    padding: 14px 18px;
+    text-decoration: none;
+}
+
+
+li a:hover:not(.active) { 
+    background-color: red;
+    color: white;
+}
+
+.active{
+    background-color: red;
+    color: white;
+}
+
+a:visited{
+    color: blueviolet;
+}
+
+img{
+    opacity: 0.5;
+    
+}
+
+h1,ol,button.mainHeader {
+    color: black;
+    cursor: pointer;
+    padding: 20px;
+    text-align: center;
+    font-family: sans-serif;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: block;
+    width: 100%;
+    position: relative;
+    background-color: red;
+    animation-name: epicanimation;
+    animation-duration: 4s;
+}
+
+.partl  {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+.partl td{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 5px 20px;
+    border-style: solid;
+    border-width: 1px;
+    overflow: hidden;
+    word-break: normal;
+    border-color: black;
+}
+.partl th{
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    padding:5px 20px;
+    border-style:solid;
+    border-width:1px;
+    overflow:hidden;
+    word-break:normal;
+    border-color:black;
+}
+.partl .partlth{
+    text-align:left;
+    vertical-align:top;
+}
+
+.panel{
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+}
+
+body {
+    background-color: rgb(150, 149, 149); 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    h1,ol,button.mainHeader {
+        width: 100%;
+    } 
+    
+    body {
+        background-color: rgb(150, 149, 149); 
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    img{
+        width: 100%;
+    }
+    
+}
+
+
+.container {
+  min-height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap-reverse;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  align-content: flex-end;
+}
+
+
+.item {
+  flex: 0 9 auto;
+  margin: 5px;
+}
+
+/* M7LO11 Formatting a form. This is adding a margin and padding for each element in the form so that it is not directly against the side of the page.*/
+form ul
+{
+	font-size:100%;
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	width:100%;
+}
+
+form li
+{
+	display:block;
+	margin:0;
+	padding:4px 5px 2px 9px;
+	position:relative;
+}
+
+form li:after
+{
+	clear:both;
+	content:".";
+	display:block;
+	height:0;
+	visibility:hidden;
+}
+
+/*M8LO10 CSS animation used at line 58.*/
+@keyframes epicanimation {
+  0%   {background-color:red;}
+  25%  {background-color:yellow;}
+  50%  {background-color:blue;}
+  75%  {background-color:green;}
+  100% {background-color:red;}
+}
+
+
+html{
+    background-image: url("background.jpg");
+    background-attachment: fixed;
+}
