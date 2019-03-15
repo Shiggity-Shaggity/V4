@@ -29,7 +29,7 @@
     </nav>
 
     <div>
-        <form method="post" action="">
+        <form method="get" action="about.html">
             <div class="form_description">
                 <h2>Contact Us!</h2>
                 <p></p>
@@ -40,16 +40,16 @@
                     <label for="element1">Email </label>
                     <!--M7LO5 text box-->
                     <div>
-                        <input name="element1" type="text" maxlength="255" value="" />
+                        <input id="element1" name="element1" type="text" maxlength="255" value="" />
                     </div>
                     <p><small>Please type a valid email.</small></p>
                 </li>
                 <li>
-                    <label>Why are you contacting us? </label>
+                    <label for="element3">Why are you contacting us? </label>
                     <div>
                         <!--M7LO8 Selection List-->
                         <select id="element3" name="element3">
-                            <option value="" selected="selected"></option>
+                            <option value="" selected="selected">General question</option>
                             <option value="1">Business inquiry</option>
                             <option value="2">Price/Part information</option>
                             <option value="3">Site Recommendation</option>
@@ -62,7 +62,7 @@
                     <!--M7LO9 Text area-->
                     <label for="element2">Type your message here </label>
                     <div>
-                        <textarea name="element2" ></textarea>
+                        <textarea id="element2" name="element2" ></textarea>
                     </div>
                 </li>
 
